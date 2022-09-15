@@ -58,7 +58,6 @@ function makeCard() {
 
 	var backImage = document.createElement('img');
 	backImage.src = './media/m.jpg';
-	console.log(backImage);
 
 	back.appendChild(backImage);
 	face.appendChild(image);
