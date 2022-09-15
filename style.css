@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
+
 }
 
 body {
@@ -61,6 +63,7 @@ body {
 .face img {
   width: 110%;
   height: 100%;
+  -webkit-user-drag: none;
 }
 
 .controls {
@@ -164,7 +167,8 @@ h3 {
     width: 100%;
     padding: 0;
   }
-  .controls > div{
+
+  .controls>div {
     margin: 10px;
   }
 }

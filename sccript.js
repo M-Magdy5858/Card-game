@@ -56,6 +56,11 @@ function makeCard() {
 	back.className = 'back';
 	var image = document.createElement('img');
 
+	var backImage = document.createElement('img');
+	backImage.src = './media/m.jpg';
+	console.log(backImage);
+
+	back.appendChild(backImage);
 	face.appendChild(image);
 	card.append(face, back);
 
@@ -83,13 +88,14 @@ function game() {
 			if (e.target.id == 'game-wrapper') {
 				// do nothing if wrapper was clicked on
 			} else {
-        // get the card element of the clicked img
+				// get the card element of the clicked img
+				console.log(e.target);
 				card = e.target.parentElement.parentElement;
 				lastCard = selected ? selected.parentElement.parentElement : null;
 
 				// I. clicking on the same previous card
 				if (e.target == selected) {
-					document.getElementById('try').innerHTML = addLeftZero(++tried);  
+					document.getElementById('try').innerHTML = addLeftZero(++tried);
 					flip(card);
 					selected = null; // reset previously selected
 				}
@@ -148,7 +154,6 @@ function game() {
 }
 
 ///////////////////////  Events  ///////////////////////////////////////
-
 renderCards(); // render all cards & imgs on loading page
 
 // start game event on clicking start btn
