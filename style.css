@@ -52,8 +52,6 @@ body {
 .back {
   z-index: -1;
   rotate: y 180deg;
-  background-color: blueviolet;
-
 }
 
 .card.flipped {
